@@ -13,42 +13,26 @@ process.env.SECRET_KEY = 'secret'
 users.use(bodyParser.json())
 
 users.get('/test', (req, res) => {
-    res.end("Hello web Deepak V4");
+    res.end("Hello web Deepak V5");
 });
 
 users.post('/testpost', (req, res) => {
-    const userData = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: req.body.password,
-        created: Date.now()
-    }
+    var requestBody=req.body;
+    var demo=req.body.first_name;
     var data=JSON.stringify(req.body);
     res.end(data);
 });
+
+
 
 users.post('/register', (req, res) => {
+  
     const userData = {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
         created: Date.now()
-    }
-    var data=JSON.stringify(req.body);
-    res.end(data);
-});
-
-/*users.post('/register', (req, res) => {
-    debugger;
-    const today = new Date()
-    const userData = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: req.body.password,
-        created: today
     }
 
     User.findOne({
@@ -75,7 +59,7 @@ users.post('/register', (req, res) => {
         .catch(err => {
             res.send('error' + err)
         })
-})*/
+});
 
 users.post('/login', (req, res) => {
     User.findOne({
