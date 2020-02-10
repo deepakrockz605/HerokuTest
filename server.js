@@ -19,7 +19,10 @@ app.use(
 )
 
 
-const mongoURI = 'mongodb://localhost:27017/node'
+const mongoURI = 'mongodb+srv://deepak.pawar@wwindia.com:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority:27017/node'
+
+// mongodb://username:password@host:port/database?options...'
+// mongodb+srv://deepak.pawar@wwindia.com:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority
 
 mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, })
