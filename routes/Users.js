@@ -29,7 +29,8 @@ users.post('/register', (req, res) => {
         password: req.body.password,
         created: today
     }
-    res.end(userData);
+    var data=JSON.stringify(req.body);
+    res.end(data);
 });
 
 /*users.post('/register', (req, res) => {
