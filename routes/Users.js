@@ -17,6 +17,13 @@ users.get('/test', (req, res) => {
 });
 
 users.post('/testpost', (req, res) => {
+    const userData = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password,
+        created: today
+    }
     var data=JSON.stringify(req.body);
     res.end(data);
 });
