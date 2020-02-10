@@ -19,7 +19,7 @@ app.use(
 )
 
 
-const mongoURI = 'mongodb://localhost:27017/projectmodule'
+const mongoURI = 'mongodb://localhost:27017/node'
 
 mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, })

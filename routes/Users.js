@@ -22,6 +22,17 @@ users.post('/testpost', (req, res) => {
 });
 
 users.post('/register', (req, res) => {
+    const userData = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password,
+        created: today
+    }
+    res.end(userData);
+});
+
+/*users.post('/register', (req, res) => {
     debugger;
     const today = new Date()
     const userData = {
@@ -56,7 +67,7 @@ users.post('/register', (req, res) => {
         .catch(err => {
             res.send('error' + err)
         })
-})
+})*/
 
 users.post('/login', (req, res) => {
     User.findOne({
