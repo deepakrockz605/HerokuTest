@@ -19,12 +19,12 @@ app.use(
 )
 
 
-/*const mongoURI = 'mongodb://localhost:27017/node'
+const mongoURI = 'mongodb+srv://deepak:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, })
     .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.log(err))*/
+    .catch(err => console.log(err))
 
 
 var Users = require('./routes/Users')
