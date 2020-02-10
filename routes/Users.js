@@ -13,7 +13,7 @@ process.env.SECRET_KEY = 'secret'
 users.use(bodyParser.json())
 
 users.get('/test', (req, res) => {
-    res.end("Hello web Deepak V6");
+    res.end("Hello web Deepak V7");
 });
 
 users.post('/testpost', (req, res) => {
