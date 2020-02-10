@@ -13,7 +13,7 @@ process.env.SECRET_KEY = 'secret'
 users.use(bodyParser.json())
 
 users.get('/test', (req, res) => {
-    res.end("Hello web Deepak V3");
+    res.end("Hello web Deepak V4");
 });
 
 users.post('/testpost', (req, res) => {
@@ -22,7 +22,7 @@ users.post('/testpost', (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
-        created: today
+        created: Date.now()
     }
     var data=JSON.stringify(req.body);
     res.end(data);
@@ -34,7 +34,7 @@ users.post('/register', (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password,
-        created: today
+        created: Date.now()
     }
     var data=JSON.stringify(req.body);
     res.end(data);
