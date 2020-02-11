@@ -7,6 +7,10 @@
     "test": "echo \"Error : no test specified \" && exit 1",
     "start": "nodemon server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepakrockz605/node-login-api.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

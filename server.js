@@ -19,7 +19,7 @@ app.use(
 )
 
 
-const mongoURI = 'mongodb+srv://deepak.pawar@wwindia.com:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority:27017/node'
+const mongoURI = 'mongodb+srv://deepak:deepak123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority'
 
 // mongodb://username:password@host:port/database?options...'
 // mongodb+srv://deepak.pawar@wwindia.com:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority
