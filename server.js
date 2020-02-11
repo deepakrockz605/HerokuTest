@@ -19,7 +19,7 @@ app.use(
 )
 
 
-const mongoURI = 'mongodb://deepak:deepak123@cluster0-shard-00-00-bk3jl.mongodb.net:27017,cluster0-shard-00-01-bk3jl.mongodb.net:27017,cluster0-shard-00-02-bk3jl.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority'
+var mongoURI = "mongodb://heroku_jrns6g00:mkelsme6fk9b3enb1i55p9g60m@ds259518.mlab.com:59518/heroku_jrns6g00";
 
 // mongodb://username:password@host:port/database?options...'
 // mongodb+srv://deepak.pawar@wwindia.com:skype@123@cluster0-bk3jl.mongodb.net/test?retryWrites=true&w=majority
