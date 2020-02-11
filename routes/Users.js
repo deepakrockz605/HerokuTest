@@ -48,7 +48,7 @@ users.post('/register', (req, res) => {
                             res.json({ status: userData.first_name + " Your Email ID : " + user.email + 'Registred Successfully!!' })
                         })
                         .catch(err => {
-                            res.send('error' + err)
+                            res.end('error' + err)
                         })
                 })
             }
@@ -57,7 +57,7 @@ users.post('/register', (req, res) => {
             }
         })
         .catch(err => {
-            res.send('error' + err)
+            res.end('error' + err)
         })
 });
 
@@ -79,7 +79,7 @@ users.post('/login', (req, res) => {
                     })
 
                     res.json({ success: "Login Successful !!!!" })
-                    res.send(token)
+                    res.end(token)
                 }
                 else {
                     res.json({ error: "Password is Incorrect !!!!" })
@@ -90,27 +90,27 @@ users.post('/login', (req, res) => {
             }
         })
         .catch(err => {
-            res.send('Error : ' + err)
+            res.end('Error : ' + err)
         })
 })
 
-users.get('/profile', (req, res) => {
-    var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
+// users.get('/profile', (req, res) => {
+//     var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
-    User.findOne({
-        _id: decoded._id
-    })
-        .then(user => {
-            if (user) {
-                res.json(user)
-            } else {
-                res.send('User does not exist')
-            }
-        })
-        .catch(err => {
-            res.send('error: ' + err)
-        })
-})
+//     User.findOne({
+//         _id: decoded._id
+//     })
+//         .then(user => {
+//             if (user) {
+//                 res.json(user)
+//             } else {
+//                 res.send('User does not exist')
+//             }
+//         })
+//         .catch(err => {
+//             res.send('error: ' + err)
+//         })
+// })
 
 
 module.exports = users
